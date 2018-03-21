@@ -1,0 +1,13 @@
+h1 {
+  /* stlye property : 값 형태로 기술 */
+  color : blue;
+
+}
+
+h2 {
+  color : green;
+}
+
+p {
+  margin-left: 10px;
+}
