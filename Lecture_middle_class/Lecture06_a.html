@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>Define Eventhandler</h2>
+    <form action="Lecture06_b.html" id = "form1" method="get">
+    <!-- <form action="Lecture06_b.html" id = "form1" method="get"
+      onsubmit="console.log('form tag'); return false; "> -->
+      <!--form의 return false 의미 - 브라우저에서 기본적으로 동작하는 기능, Lecture0_b html로 넘기는 기능을 제한하기 위함  -->
+      Name : <input type="text" name="id"><br>
+      Message : <input type="text" name="msg"><br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <script>
+      var t = document.getElementById("#form1");
+      t.onsubmit = function a(){
+        console.log("from property");
+        return false;
+      }
+
+      function b(){
+        console.log("from addEventListener");
+        return false;
+      }
+
+      t.addEventListener("submit", b);
+      // t.addEventListener("어떤 이벤트 인지", "이벤트를 핸들링할 함수") 이벤트 명을 쓸때는 on을 뺴고 이벤트 이름만 써준다
+
+      // 이벤트리스너 삭제
+      t.removeEventListener("submit", b);
+    </script>
+
+  </body>
+</html>
