@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script>
+      var req = new XMLHttpRequest();
+      req.onreadystatechange = function a(){
+        console.log(this.readyState, this.status);
+        if(this.readyState==4 && this.status ==200){
+          console.log(this.response);
+        }
+      }
+      // req.open("GET" "./data.txt");
+      req.open("GET" "http://www.google.com/");
+      req.send();
+      console.log(req.response);
+    </script>
+  </head>
+  <body>
+    AJAX
+  </body>
+</html>
