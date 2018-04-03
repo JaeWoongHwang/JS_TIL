@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      .character { color:black; }
+      .word { color:gray; }
+    </style>
+    <script>
+    var req = new XMLHttpRequest();
+    req.onreadystatechange = function a(){
+      console.log(this.readyState, this.status);
+      if(this.readyState==4){
+        console.log(this.response);
+      }
+    }
+    req.open("GET", "./data.txt")
+    req.send();
+    </script>
+  </head>
+  <body>
+    <p id ="template">
+      <span class ="character">character</span> : <span class = "word">word</span>
+    </p>
+  </body>
+</html>

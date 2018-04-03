@@ -2,22 +2,25 @@
 
 #### readyState 속성
 - AJAX 요청에 따라 0~4까지 변화함
-|readyState|의미|
-|0|open 메소드 호출 전|
-|1|open 메소드 호출 후, send 메소드 호출 전|
-|2|보낸 요청에 대해 응답 헤더가 수신된 후|
-|3|응답의 바디 부분이 수신 중 일 때|
-|4|모든 응답이 수신 되었을 때|
+| readyState   |      의미      |
+|----------|:-------------:|
+| 0 |  open 메소드 호출 전 |
+| 1 |  open 메소드 호출 후, send 메소드 호출 전 |
+| 2 | 보낸 요청에 대해 응답 헤더가 수신된 후 |
+| 3 | 응답의 바디 부분이 수신 중 일 때 |
+| 4 | 모든 응답이 수신 되었을 때 |
+
 
 #### onreadystatechange 속성
 - readyState가 변할 때 마다 호출되는 콜백 함수
 
 #### status 속성
 - HTTP response의 응답 헤더에 기록된 코드
-|Response Code|의미|
-|200|OK|
-|404|Not Found|
-|200|Internal Error|
+| Response Code | 의미  |
+|----------|:-------------:|
+|  200  |  OK  |
+|  404  |  Not Found  |
+|  200  |  Internal Error  |
 
 #### 응답을 정상적으로 수신한 경우
 - readyState : 4
