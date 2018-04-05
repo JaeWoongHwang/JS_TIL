@@ -1,0 +1,30 @@
+- AJAX를 통해 JSON 데이터를 받아 옴
+~~~
+var req = XMLHttpRequest();
+req.onreadystatechange = function a(){
+  if(this.readyState == 4){
+    //...
+  }
+}
+
+req.open("GET", "JSON_DATA_URL");
+req.send();
+~~~
+
+- JSON parse API를 이용해 받아온  JSON 문자열 데이터를  Javascript 객체로 변환
+~~~
+req.onreadystatechange = function a(){
+  if(this.readyState == 4){
+    data = JSON.parse(this.response);
+    //...
+  }
+}
+~~~
+
+- 데이터를 처리하는 Javascript 프로그램 실행 (HTML 문서에 반영)
+- 데이터가 여러개인 경우 (배열 형태로 값을 받은 경우) 반복문으로 각각의 데이터에 대해 처리
+~~~
+for(var i = 0; i<data.length; i++){
+  document.write(data[i].id, data[i].msg);
+}
+~~~
