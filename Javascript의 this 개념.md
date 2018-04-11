@@ -23,9 +23,9 @@ trick()
 
  #### 1-2. strict mode
 
-- strict mode 
+- strict mode
   - 코드에 더 나은 오류 검사를 적용하는 방법. strict 모드를 사용하면, 예를 들어 암시적으로 선언한 변수를 사용하거나 읽기 전용 속성에 값을 할당하거나 확장할 수 없는 개체에 속성을 추가할 수 없음
-  - 더 엄격하게 코드를 검사하는 방법 -> 이를 통해 개발자는 더 손쉽게 디버깅을 할 수 있음 
+  - 더 엄격하게 코드를 검사하는 방법 -> 이를 통해 개발자는 더 손쉽게 디버깅을 할 수 있음
 
 
 - `this`의 값은 undefined
@@ -34,14 +34,14 @@ trick()
 'user strict';
 var name = "fake";
 
-funtion trick(){	
+funtion trick(){
   console.log(this.name); // this == undefined
 }
 
 trick();
 ~~~
 
-### 1-3 Another Case
+#### 1-3 Another Case
 
 ~~~javascript
 var age = 100;
@@ -58,5 +58,66 @@ function bar(){
 info();
 ~~~
 
+### Dot notation
+  - 점 방식
+  - Dot notation을 이용해 함수를 호출하는 경우, 해당 함수 내부의 this는 점 앞에 있는 객체를 가리킴
 
+#### Example
+~~~
+//Example 1.
+var age = 100;
 
+var ken = {
+  age: 35,
+  foo: function foo () {
+    console.log(this.age);
+  }
+};
+
+ken.foo(); // ?
+~~~
+
+~~~
+//Example2
+function foo () {
+  console.log(this.age);
+}
+
+var age = 100;
+
+var ken = {
+  age: 35,
+  foo: foo
+};
+
+var wan = {
+  age: 31,
+  foo: foo
+};
+
+ken.foo(); // ?
+wan.foo(); // ?
+~~~
+
+~~~
+Example3
+var age = 100;
+
+var ken = {
+  age: 35,
+  foo: function bar () {
+    console.log(this.age);
+  }
+};
+
+var wan = {
+  age: 31,
+  foo: ken.foo
+};
+
+var foo = ken.foo;
+
+ken.foo(); // ?
+wan.foo(); // ?
+foo(); // ?
+~~~
