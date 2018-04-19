@@ -7,6 +7,17 @@ req.onreadystatechange = function(){
     for(var i  = 0; i < data.length; i++){
       var div = document.createElement("div");
       div.setAttribute("class", "image");
+      // Define onclick event function
+      div.onclick = function(){
+        /*if(this.getAttribute("class").indexOf("image-selected") == -1){
+          this.setAttribute("class", "image image-selected");
+        } else {
+            this.setAttribute("class", "image image");
+        }*/
+
+        // Using API
+        this.classList.toggle("image-selected");
+      }
       var img = document.createElement("img");
       img.src = data[i];
       div.appendChild(img);
