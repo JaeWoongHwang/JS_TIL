@@ -18,6 +18,18 @@ req.onreadystatechange = function(){
         // Using API
         this.classList.toggle("image-selected");
       }
+      // The function of change the pictures size
+      div.onmouseover = function(){
+        var element = this;
+        this.timerId = setTimeout(function(){
+          element.classList.add("image-magnified");
+        }, 1000);
+      }
+      div.onmouseout = function(){
+        clearTimeout(this.timerId);
+        this.classList.remove("image-magnified");
+      }
+
       var img = document.createElement("img");
       img.src = data[i];
       div.appendChild(img);
