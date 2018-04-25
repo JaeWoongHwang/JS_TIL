@@ -55,3 +55,19 @@ function selectAll(btn){
     }
   }
 }
+
+function slideShow(btn){
+  var images = document.getElementsClassName("image");
+  var index = 0;
+  images[index].classList.add("image-magnified");
+
+  var intervalId = setInterval(function(){
+    images[index].classlist.remove("image-magnified");
+    index++;
+    if(index < images.length){
+        images[index].classlist.add("image-magnified");
+    } else {
+      clearInterval(intervalId);
+    }
+  }, 1000);
+}
