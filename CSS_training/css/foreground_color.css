@@ -1,0 +1,16 @@
+/* rgb 값 */
+p{
+  color: rgb(100,100,90);
+  background-color: white;}
+/* 핵사 코드 */
+h2{
+  color: #ee3e80;
+  background-color: DarkCyan;}
+/* 색상 명 */
+h1{
+  color: DarkCyan;
+  background-color: #ee3e80;}
+
+/* 배경색 */
+body{
+  background-color: rgb(200,200,200);}
