@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>hover & actice & focus</title>
+    <style type="text/css">
+      input{
+        padding: 6px 12px 6px 12px;
+        border: 1px solid #665544;
+        color: #ffffff;}
+      input.submit:hover{
+        background-color: #665544;}
+      input.submit:active{
+        background-color: chocolate;}
+      input.text{
+        color:#cccccc;}
+      input.text:focus{
+        color: #665544;}
+    </style>
+  </head>
+  <body>
+    <form action="index.html" method="post">
+      <input type="email" class="text" placeholder="Enter email address...">
+      <input type="submit" class="submit" value="Submit">
+    </form>
+  </body>
+</html>
