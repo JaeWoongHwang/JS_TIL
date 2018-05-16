@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Form Control Problem</title>
+  </head>
+  <body>
+    <form action="example.php" method="post">
+      <div>
+        <label for="name" class="title">이름:</label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div>
+        <label for="email" class="title">이메일:</label>
+        <input type="text" id="email" name="email" />
+      </div>
+      <div class="radio_buttons">
+        <span class="title">성별</span>
+        <input type="radio" name="gender" id="male" value="M" />
+        <label for="male">남</label>
+        <input type="radio" name="gender" id="female" value="W" />
+        <label for="female">여</label>
+      </div>
+      <div class="submit">
+        <input type="submit" name="등록" value="submit">
+      </div>
+    </form>
+  </body>
+</html>
