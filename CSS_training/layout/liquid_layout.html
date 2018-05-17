@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Liquid Layout</title>
+    <style type="text/css">
+    body{
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;}
+    #content{overflow: auto;}
+    #nav, #feature, #footer{
+      margin: 1%;}
+    .column1, .column2, .column3{
+      width: 31.3%;
+      float: left;
+      margin: 1%;}
+    .column3{margin-right: 0%;}
+    li{
+      display: inline;
+      padding: 0.5em;}
+    #nav, #footer{
+      background-color: #efefef;
+      padding: 0.5em 0;}
+    #feature, .article {
+      height: 10em;
+      margin-bottom: 1em;
+      background-color: #efefef;}
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Logo</h1>
+      <div id="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Introduce</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content">
+      <div id="feature">
+        <p>Characteristic</p>
+      </div>
+      <div class="article column1">
+        <p>First Column</p>
+      </div>
+      <div class="article column2">
+        <p>Second Column</p>
+      </div>
+      <div class="article column3">
+        <p>Third Column</p>
+      </div>
+    </div>
+    <div id="footer">
+      <p>&copy; Copyright 2011</p>
+    </div>
+  </body>
+</html>
