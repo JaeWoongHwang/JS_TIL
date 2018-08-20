@@ -1,0 +1,52 @@
+body{
+  background-color: #efefef;
+}
+
+body, h1{
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper{
+  width:960px;
+  margin: 0 auto;
+}
+
+.cover{
+  background-image: url(../images/cover.png);
+  background-size: cover;
+  background-color: #336699;
+  height: 50vh;
+}
+
+.contents p{
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+.contents h1{
+  font-size: 80px;
+  color: #efefef;
+  text-transform: uppercase;
+  line-height: 0.8;
+  font-family: 'impact';
+  margin-top: -0.8em;
+}
+
+.parent{
+  overflow: hidden;
+  background-color: white;
+  width: 960px;
+  margin: 50px auto;
+  font-size: 20px;
+  font-family: 'arial';
+  line-height: 1;
+}
+
+.first{
+  font-size: 30px;
+}
+
+.second{
+  font-size: 20px;
+}

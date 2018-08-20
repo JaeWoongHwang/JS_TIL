@@ -1,0 +1,40 @@
+.header h1{
+  color: white;
+}
+
+.header img{
+  width: 200px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.section{
+  background-color: white;
+  border: 1px solid #999;
+  margin: 20px;
+  padding: 20px;
+}
+
+.footer{
+  background-color: #eee;
+  text-align: center;
+  padding: 10px;
+  color: #999;
+}
+
+.parents{
+  background-color: white;
+  width: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.children{
+  width: 200px;
+  height: 200px;
+  background-color: orangered;
+  color: rgba(255,255,255,0.2);
+  font-size: 200px;
+  text-align: center;
+  margin: 50px;
+}
