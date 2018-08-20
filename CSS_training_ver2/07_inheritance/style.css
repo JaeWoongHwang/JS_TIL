@@ -1,0 +1,46 @@
+body{
+  background-color: #ddd;
+}
+a{
+  color: inherit; /*부모로 부터 상속*/
+  text-decoration: none;
+  font-weight: bold;
+}
+button{
+  font: inherit;
+  text-transform: uppercase;
+}
+.box{
+  background-color: white;
+  width: 960px;
+  margin: 200px auto 0;
+  text-align: center;
+  border-radius: 20px;
+  border-right: 5px solid #ccc;
+  border-bottom: 5px solid #999;
+  color: black;
+}
+.box h1{
+  color: grey;
+  width: 500px;
+  margin: -10px auto 10px;
+  font-size: 2.5rem;
+}
+.box h1:before{
+  content: ' ';
+  display: inline-block;
+  width: 0.3em;
+  height: 0.3em;
+  background-color: currentColor;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+
+.box p{
+  margin-top: -50px;
+  padding: 3rem;
+}
+.box-cover{
+  margin-top: -150px;
+  width: 500px;
+}

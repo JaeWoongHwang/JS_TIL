@@ -1,0 +1,20 @@
+body{
+  background-color: #999;
+}
+
+.wrapper{
+  background-color: blanchedalmond;
+  width: 960px;
+  height: 400px;
+  margin: 0 auto;
+  line-height: 400px;
+  text-align: center;
+}
+
+.box{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  vertical-align: middle;
+}

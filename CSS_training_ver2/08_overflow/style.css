@@ -1,0 +1,22 @@
+body{
+  background-color: #ddd;
+}
+.box{
+  background-color: white;
+  overflow: hidden; /*box에 오버플로우를 적용시켜 box를 작은 body가 가지고 있는 특징을 box에 적용시킴*/
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.box p{
+  border: 10px solid black;
+  overflow: hidden;
+}
+.box span{
+  background-color: cyan;
+  clear: both; /*clear는 상단에 float가 되어있으면 float이후의 바리게이트 역할을 함*/
+  display: block;
+}
