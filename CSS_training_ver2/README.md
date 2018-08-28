@@ -68,8 +68,11 @@
 
 ### 오버플로우
 - 자식의 영역이 부모의 영역을 벗어난 상황을 제어하는 속성
-- hidden 속성을 제일 많이 사용한다.
-- 원한다면 밑의 영역을 볼 수 있는 scroll 속성도 있다.
+- 오버플로우는 새로운 문서를 시작하는 일로 생각할 수 있다. 새로운 body영역이 시작된다는 느낌
+- 오버플로우가 부여된 요소는 독립적인 부분이 된다. => Block Formating Context(BFC)
 - 오버플로우 속성으로 float 속성의 문제를 해결할 수 있다.
+- float된 요소까지도 온전히 포함하고 있는 새로운 Block Formating Context를 생성해준다.
+- 원한다면 밑의 영역을 볼 수 있는 scroll 속성도 있다.
 - body는 float된 속성의 높이를 인지할 수 있다.
-- body는 최상위 요소이자 Block Formating Context(BFC) 요소로써 블럭요소가 그려질 수 있는 환경적인 부분을 담당한다.
+- body는 최상위 요소이자 Block Formating Context 요소로써 블럭요소가 그려질 수 있는 환경적인 부분을 담당한다.
+- 디폴트는 visible / hidden 속성을 제일 많이 사용한다.
