@@ -68,8 +68,74 @@
 
 ### 오버플로우
 - 자식의 영역이 부모의 영역을 벗어난 상황을 제어하는 속성
-- hidden 속성을 제일 많이 사용한다.
-- 원한다면 밑의 영역을 볼 수 있는 scroll 속성도 있다.
+- 오버플로우는 새로운 문서를 시작하는 일로 생각할 수 있다. 새로운 body영역이 시작된다는 느낌
+- 오버플로우가 부여된 요소는 독립적인 부분이 된다. => Block Formating Context(BFC)
 - 오버플로우 속성으로 float 속성의 문제를 해결할 수 있다.
+- float된 요소까지도 온전히 포함하고 있는 새로운 Block Formating Context를 생성해준다.
+- 원한다면 밑의 영역을 볼 수 있는 scroll 속성도 있다.
 - body는 float된 속성의 높이를 인지할 수 있다.
-- body는 최상위 요소이자 Block Formating Context(BFC) 요소로써 블럭요소가 그려질 수 있는 환경적인 부분을 담당한다.
+- body는 최상위 요소이자 Block Formating Context 요소로써 블럭요소가 그려질 수 있는 환경적인 부분을 담당한다.
+- 디폴트는 visible / hidden 속성을 제일 많이 사용한다.
+
+### 플렉스 박스
+- flex box 레이아웃에서 가장 중요한 컴포넌트 두 개는 container와 items이다.
+
+- **수평 레이아웃**
+
+  ~~~
+  .container{
+      display: flex;
+  }
+  ~~~
+
+  위 결과는 items에 손대지 않고도 수평축을 따라 알아서 정렬된다.
+
+- **수직 레이아웃**
+
+  - 기존 레이아웃의 중심축은 수평축이고 교차축은 수직축이다. flex-direction: column을 추가하면 이 두개의 축을 전환할 수 있다.
+
+  ~~~
+  .container{
+      display: flex;
+      flex-direction: column;
+  }
+  ~~~
+
+  - 중심축이 수직축이되면 items가 수직으로 정렬되어 쌓인다.
+
+- **Justify content and Align items**
+
+  - 중심축이 수직축인 container의 items를 다시 수평으로 만드려면, flex-direction: column을 row로 바꿔주면 된다.
+  - 축을 이해해야 하는 중요한 이유는 justify-content나 align-items와 같은 속성들은 중심축과 교차축에 기준하여 items를 정렬하기 떄문이다.
+  - justify-content를 이용하여 items를 중심축의 중앙에 정렬하는 코드는 다음과 같다.(가운데 정렬 개념(왼쪽-가운데-오른쪽))
+
+  ~~~
+  .container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+  ~~~
+
+  - align-items를 이용하여 교차축의 중앙에 정렬한다.(중앙 정렬 개념(위-중간-아래))
+
+  ~~~
+  .container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center:
+      align-items: center;
+  }
+  ~~~
+
+- **Items**
+
+  - 축에 따른 전체적인 정렬말고도 각각의 아이템에 CSS효과를 줄 수 있다.
+  - 아래는 aline-self 속성을 이용하여 첫 번째 item의 위치를 조정한 코드다.
+
+  ~~~
+  .item{
+      align-self: flex-end;
+  }
+  * align-self는 align-item 속성과 같은 옵션 값을 가진다.
+  ~~~
