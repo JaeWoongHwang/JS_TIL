@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var user_height = 180;
+        var user_weight = 70;
+        var std_weight = (user_height - 100) * 0.9;
+
+        if(std_weight > user_weight){
+            var result = "결과 : 적정 체중은" + std_weight + "kg이며, 현재 적정 체중에서" + (std_weight-user_weight) + "kg만큼 부족합니다." ;
+        } else {
+            var result = "결과 : 적정 체중은" + std_weight + "kg이며, 현재 적정 체중에서" + (std_weight-user_weight) + "kg만큼 초과 했습니다." ;
+        };
+
+        document.write(result);
+    
+    </script>
+</body>
+</html>

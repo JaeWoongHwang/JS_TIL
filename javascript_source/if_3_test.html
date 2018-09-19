@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var userName = prompt("귀하의 이름을 입력하세요.","");
+
+        if(userName){
+            document.write(userName + "님 반갑습니다! 방문을 환영합니다.");
+        } else {
+            alert("승인된 사용자가 아닙니다.");
+            userName = prompt("귀하의 이름을 입력하세요.","");
+            if(userName){
+                document.write(userName + "님 반갑습니다! 방문을 환영합니다.");
+            } else {
+                alert("기회를 드렸잖아요?");
+            }
+        }
+    </script>
+</body>
+</html>

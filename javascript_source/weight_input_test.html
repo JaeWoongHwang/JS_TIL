@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var user_name = prompt("이름을 입력하세요","");
+        var user_height = prompt("신장을 입력하세요", "0");
+        var user_weight = prompt("체중을 입력하세요","0");
+    
+        var std_weight = (user_height - 100) * 0.9;
+        var result = user_weight >= std_weight-5 && user_weight <= std_weight+5; // 오차범위 +-5
+        result = result ? "적정 체중입니다." : "적정 체중이 아닙니다."
+        document.write(user_name + "님은" + result);
+    </script>
+</body>
+</html>
