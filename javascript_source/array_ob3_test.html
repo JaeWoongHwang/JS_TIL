@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var greenLine = ["강남", "방배", "교대"];
+    var yellowLine = ["미금", "정자", "수서"];
+
+    greenLine.splice(2, 1, "서초", "역삼");
+    document.write(greenLine, "<br>");
+
+    var data1 = yellowLine.pop();
+    var data2 = yellowLine.shift();
+    
+    yellowLine.push(data2);
+    document.write(yellowLine, "<br>");
+
+    yellowLine.unshift(data1);
+    document.write(yellowLine, "<br>");
+    </script>
+</body>
+</html>
