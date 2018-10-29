@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //즉시 실행 함수 기본형
+        // (function(){
+
+        // }());
+        
+        (function(){
+            var num = 100;
+            function menu(){
+                num += 100;
+                alert(num);
+            }
+            menu();
+        }());
+
+        (function(){
+            var num = 100;
+            function menu(){
+                alert(num);
+            }
+        }());
+        
+    </script>
+</body>
+</html>
