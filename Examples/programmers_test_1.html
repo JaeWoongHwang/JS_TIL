@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var array = [1, 5, 2, 6, 3, 7, 4];
+        var commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]];
+        var answer = [];
+
+        function solution(array, commands) {
+            for (var i = 0; i < commands.length; i++) {
+                var j=0;
+                var startNum = commands[i][j];
+                var endNum = commands[i][j+1];
+                var resultNum = commands[i][j+2];
+                var temp = array.slice(startNum, endNum);
+
+                answer[i] = temp[resultNum];
+            }
+            return answer;
+        }
+    </script>
+</body>
+
+</html>
