@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var email = prompt("What is your email?","");
+    var domain =[".co.kr", ".com", ".net", ".or.kr", "go.kr" ];
+
+    var check1 = false;
+    var check2 = false;
+
+    if(email.indexOf("@")>0){
+        check1 = true;
+    }
+
+    for(var i = 0; i<domain.length; i++){
+        if(email.indexOf(domain[i]>0)){
+            check2 = true;
+        }
+    }
+    
+    if(check1 && check2){
+        document.write(email);
+    } else {
+        alert("This is an invalided email");
+        location.reload();
+    }
+    
+    </script>
+</body>
+</html>

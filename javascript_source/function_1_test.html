@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 일반 함수 정의 방식
+        var count =0;
+        myFnc();
+
+        function myFnc(){
+            count++;
+            document.write("hello"+count, "<br>");
+        }
+        // 익명 함수 선언 참조 방식
+        var theFnc = function(){
+            count++;
+            document.write("bye"+count, "<br>");
+        }
+
+        theFnc();
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function CheckWeight(name, height, weight){
+            this.userName = name;
+            this.userHeight = height;
+            this.userWeight = weight;
+            this.minWeight;
+            this.maxWeight;
+
+            this.getInfo = function(){
+                var str ="";
+                str += "Name : " + this.userName + ",";
+                str += "Height : " + this.userHeight + ",";
+                str += "Weight : " + this.userWeight + ",";
+                return str;
+            }
+
+            this.getResult = function(){
+                this.minWeight = (this.userHeight-100)*0.9 -5;
+                this.maxWeight = (this.userHeight-100)*0.9 +5;
+
+                if(this.userWeight>=this.minWeight && this.userWeight<=this.maxWeight){
+                    return "It's normal weight";
+                } else if(this.userWeight<this.minWeight){
+                    return "It's underweight";
+                } else {
+                    return "It's overweight";
+                }
+            }
+        }
+        
+        var mark = new CheckWeight("mark", 190, 90);
+        var john = new CheckWeight("john", 168, 62);
+        console.log(mark);
+        console.log(john);
+        
+        document.write(mark.getinfo());
+        document.write(john.getResult());
+    </script>
+</body>
+</html>
