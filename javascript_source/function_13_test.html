@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function TestScore(name,kor,eng){
+            this.userName = name;
+            this.korNmae = kor;
+            this.engName = eng;
+
+            this.getTestInfo=function(){
+                document.write("이름:");
+                document.write("국어:");
+                document.write("영어:");
+            }
+            this.getAvg=function(){
+                return;
+            }
+        }
+
+        var kimgun = new TestScore("김군", 80, 90);
+        var ohgun = new TestScore("오군", 100, 80);
+
+        kimgun.getTestInfo();
+        document.write("평균점수:" + kimgun.getAvg(), "<br><br>");
+
+        ohgun.getTestInfo();
+        document.write("평균점수:" + ohgun.getAvg(), "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
