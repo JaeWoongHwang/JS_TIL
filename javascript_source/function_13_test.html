@@ -8,16 +8,16 @@
     <script>
         function TestScore(name,kor,eng){
             this.userName = name;
-            this.korNmae = kor;
-            this.engName = eng;
+            this.korNum = kor;
+            this.engNum = eng;
 
             this.getTestInfo=function(){
-                document.write("이름:");
-                document.write("국어:");
-                document.write("영어:");
+                document.write("이름:"+ this.userName, "<br/>");
+                document.write("국어:" + this.korNum, "<br/>");
+                document.write("영어:"+ this.engNum);
             }
             this.getAvg=function(){
-                return;
+                return (this.korNum+this.engNum)/2;
             }
         }
 
