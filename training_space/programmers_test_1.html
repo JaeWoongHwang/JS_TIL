@@ -13,16 +13,23 @@
         var array = [1, 5, 2, 6, 3, 7, 4];
         var commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]];
         var answer = [];
+        var temp = [];
 
-        function solution(array, commands) {
+        function solution() {
             for (var i = 0; i < commands.length; i++) {
-                var j=0;
-                var startNum = commands[i][j];
-                var endNum = commands[i][j+1];
-                var resultNum = commands[i][j+2];
-                var temp = array.slice(startNum, endNum);
 
-                answer[i] = temp[resultNum];
+                for (var j = 0; j < commands.length; j++) {
+                    // Step 1
+                    var start = commands[i][1];
+                    var end = command[i][2];
+                    var pick = commands[i][3];
+                }
+                // Step 2
+                array.slice(start, end);
+                temp[i] = array[i];
+                temp.sort();
+                // Step 3
+                answer[i]=temp[i];
             }
             return answer;
         }
