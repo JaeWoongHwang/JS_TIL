@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <title>Document</title>
     <script>
         $(function(){
-            $("*").css("border", "1px solid #909090");
-            $("#text").css("background-color","#ffcc00")
-            .css("border","1px solid #e1e1e1");
-            $("h2").next().css("color", "green")
-            .parent().css("border", "1px solid #f90")
+            $("#list_1").parent().css("border", "2px dashed #000000");
         });
     </script>
 </head>
 <body>
-    <h1>Jquery</h1>
-    <h2 id="text">Test Comment1</h2>
-    <h3>Text Comment2</h3>
+    <h1>인접 관계 선택자</h1>
+    <ul id="wrap">
+        <li>리스트1
+            <ul id="list_1">리스트1-1</ul>
+            <ul>리스트1-2</ul>
+        </li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ul>
 </body>
+
 </html>
