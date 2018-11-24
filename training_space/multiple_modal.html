@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <title>Multiple Modal Test</title>
+    <style>
+        .modal{
+          width: 600px;
+          height: 400px;
+          background-color: #ffffff;
+          border: 1px solid #f7f7f7;
+        }
+        .modal-dialog, .modal-content{
+          width: 100%;
+          height: 100%;
+        }
+        .modal-header{
+          width: 100%;
+          height: 20%;
+          background-color: #f7f7f7;
+        }
+
+        .modal-body{
+          width: 100%;
+          height: 60%;
+        }
+
+        .modal-footer{
+          width: 100%;
+          height: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Modal Section-->    
+    <!-- First Modal -->
+    <div class="modal" id="firstModal" role="dialog" style="display: none; z-index: 9999;"> 
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                    <h4 class="modal-title">First Modal</h4>
+                </div>
+                <div class="modal-body">
+                    <a class="btn btn-secondary" data-toggle="modal" data-trigger="#secondModal">Launch Modal</a>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" data-dismiss="modal" class="btn">Close</a>
+                    <a href="#" class="btn btn-primary">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Content Section -->
+    <div class="button-space">
+        <button type="button" class="btn btn-primary" id="show-modal-btn" data-toggle="modal" data-target="#firstModal" data-backdrop="static" >modal</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#show-modal-btn").click(function(){
+            $("#firstModal").modal();
+            });
+        });
+    </script>
+</body>
+
+</html>
