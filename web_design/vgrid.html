@@ -3,12 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="js/v-grid.js">
-    <style>
-
-    </style>
   </head>
   <body>
+
     <div id="container">
         <div>
             <img src="images/santorini.jpeg" alt="">
@@ -47,5 +44,14 @@
         </div>
         
     </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/v-grid.js"></script>
+    <script>
+        $("#container").vgrid({
+            time:400,
+            delay:30,
+            wait:500
+        });
+    </script>
   </body>
 </html>
