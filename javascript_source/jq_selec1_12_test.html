@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            var style = {
+                "background-color": "bisque",
+                "border":"1px solid #f7f7f7"
+            }
+            // 전체 형제 요소 선택자
+            $(".temp").siblings().css(style);
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <p class="temp">내용2</p>
+        <p>내용3</p>
+        <p>내용4</p>
+    </div>
+</body>
+</html>
