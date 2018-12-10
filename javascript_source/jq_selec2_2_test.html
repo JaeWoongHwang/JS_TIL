@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("#menu li:even").css({
+                "background-color": "#e5e5e5"
+            });
+
+            $("#menu li:odd").css({
+                "background-color": "#ffcc00"
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu">
+        <li>content</li>
+        <li>content</li>
+        <li>content</li>
+        <li>content</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("li:first-of-type").css({
+                "background-color": "#ff0"
+            });
+
+            $("li:last-of-type").css({
+                "background-color": "#0ff"
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>탐색 선택자</h1>
+    <ul>
+        <li>content1-1</li>
+        <li>content1-2</li>
+        <li>content1-3</li>
+    </ul>
+    <ul>
+        <li>content2-1</li>
+        <li>content2-2</li>
+        <li>content2-3</li>
+    </ul>
+</body>
+
+</html>

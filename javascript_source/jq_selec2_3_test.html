@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            // eq(index) 선택한 요소 중 지정한 인덱스가 참조하는 요소만 선택
+            $("#menu li").eq(2).css({
+                "border": "1px dashed red"
+            });
+            // lt(index) less than, 선택한 요소 중 지정한 인덱스보다 작은 인덱스를 참조하는 요소만 선택
+            $("#menu li:lt(2)").css({
+                "background-color": "#ffcc00"
+            });
+            // gt(index) greater then,  선택한 요소 중 지정한 인덱스보다 큰 인덱스를 참조하는 요소만 선택
+            $("#menu li:gt(2)").css({
+                "background-color": "#e1e1e1"
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+        <li>내용5</li>
+    </ul>
+</body>
+
+</html>
