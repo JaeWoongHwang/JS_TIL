@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            var obj = [{
+                "area": "Seoul"
+            }, {
+                "area": "Busan"
+            }, {
+                "area": "Jeonju"
+            }]
+
+            $(obj).each(function (i, o) {
+                console.log(i + ":", o);
+            });
+
+            console.log("=======The End========");
+
+            $.each($("#menu2 li"), function (i, o) {
+                console.log(i + ":", o);
+            });
+
+            console.log("=======The End2=======");
+
+            $.each($("#menu2 li"), function (i) {
+                console.log(i + ":", o);
+            });
+        })
+    </script>
+</head>
+<h1>탐색 선택자</h1>
+<ul id="menu1">
+    <li>content1-1</li>
+    <li>content1-2</li>
+    <li>content1-3</li>
+</ul>
+<ul id="menu2">
+    <li>content2-1</li>
+    <li>content2-2</li>
+    <li>content2-3</li>
+</ul>
+
+<body>
+
+</body>
+
+</html>
