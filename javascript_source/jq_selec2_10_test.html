@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            var idxNum = $("li").index($("#list"));
+            console.log(idxNum);
+        });
+
+    </script>
+</head>
+
+<body>
+    <h1>Title</h1>
+    <ul>
+        <li>Content-1</li>
+        <li>Content-2</li>
+        <li>Content-3</li>
+        <li id="list">Content-4</li>
+        <li>Content-5</li>
+        <li>Content-6</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                var arr1 = ["Seoul", "Busan", "Daejun", "Daegu", "Jeju"];
+                var arr2 = ["Korea", "US", "China", "Japan"];
+                var obj = {
+                    "name": "jung",
+                    "area": "Seoul"
+                }
+
+                var idxNum = $.inArray("Busan", arr1);
+                console.log(idxNum);
+
+                var okArray1 = $.isArray(arr1);
+                var okArray2 = $.isArray(obj);
+                console.log(okArray1);
+                console.log(okArray2);
+
+                $.merge(arr2, arr1);
+                console.log(arr2);
+            })
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
