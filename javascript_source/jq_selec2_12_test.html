@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("#wrap p:hidden").css({
+                "display": "block",
+                "background": "#ff0"
+            });
+
+            var z1 = $("#zone1 :selected").val();
+            console.log(z1);
+
+            var z2 = $("#zone2 :checked").val();
+            console.log(z2);
+
+            var z3 = $("#zone3 :checked").val();
+            console.log(z3);
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <p>First Content</p>
+        <p style="display:none">Second Content</p>
+        <p>Third Content</p>
+    </div>
+    <form action="#">
+        <p id="zone1">
+            <select name="course" id="course">
+                <option value="opt1">Option1</option>
+                <option value="opt2" selected>Option2</option>
+                <option value="opt3">Option3</option>
+            </select>
+        </p>
+        <p id="zone2">
+            <input type="checkbox" name="hobby1" value="reading">Reading
+            <input type="checkbox" name="hobby2" value="cycle">Cycle
+            <input type="checkbox" name="hobby3" value="hike" checked>Hike
+        </p>
+        <p id="zone3">
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female" checked>Female
+        </p>
+    </form>
+</body>
+
+</html>
