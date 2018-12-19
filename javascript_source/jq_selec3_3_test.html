@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                // 요소를 선택하여 지정한 클래스 값을 생성
+                $("#p1").addClass("aqua");
+                // 요소를 선택하여 지정한 클래스 값을 삭제
+                $("#p2").removeClass("red");
+                // 요소를 선택하여 지정한 클래스 값이 있으면 삭제하고, 없으면 생성
+                $("#p3").toggleClass("green");
+                $("#p4").toggleClass("green");
+                // 선택한 요소에 지정한 클래스 값이 있으면 true 없으면 false를 반환
+                $("#p6").text($("#p5").hasClass("yellow"));
+            });
+        });
+
+    </script>
+    <style>
+        .aqua {
+            background-color: #0ff;
+        }
+
+        .red {
+            background-color: #f00;
+        }
+
+        .green {
+            background-color: #0f0;
+        }
+
+        .yellow {
+            background-color: #ff0;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus molestias magnam doloribus.</p>
+    <p id="p2" class="red">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus molestias magnam
+        doloribus.</p>
+    <p id="p3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus molestias magnam doloribus.</p>
+    <p id="p4" class="green">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus molestias magnam
+        doloribus.</p>
+    <p id="p5" class="yellow">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus molestias magnam
+        doloribus.</p>
+    <p id="p6"></p>
+</body>
+
+</html>

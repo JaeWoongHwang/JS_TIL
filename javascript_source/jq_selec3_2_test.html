@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                var srcVal = $("#sec_1 img").attr("src");
+                console.log(srcVal);
+
+                $("#src_1 img").attr({
+                    "width": 200,
+                    // id값이 "sec_1"인 요소의 하위 img 요소를 선택하여 각각의 값을 지정한 값으로 바꾸거나 새로 지정한다.
+                    "src": srcVal.replace("1.jpg", "2.jpg"),
+                    "alt": "바위"
+                })
+                    // 선택한 요소에서 기존의 속성을 삭제할 때 사용
+                    .removeAttr("border");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1><strong>객체 조작 및 생성</strong></h1>
+    <section id="sec_1">
+        <h2>이미지 속성</h2>
+        <p><img src="" alt=""></p>
+    </section>
+</body>
+
+</html>
