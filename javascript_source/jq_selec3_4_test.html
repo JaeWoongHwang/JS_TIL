@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                // 선택한 요소의 value 속성 값을 가져옴
+                var result_1 = $("#user_name").val();
+                console.log(result_1);
+
+                // 선택한 요소의 value 속성에 새 값을 적용
+                $("#user_id").val("javascript");
+
+                // 선택한 요소의 value 속성의 초깃값을 가져옴
+                var result_2 = $("#user_id").prop("defaultValue");
+                console.log(result_2);
+
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <h1>객체 조작 및 생성</h1>
+    <form action="#" id="form_1">
+        <p>
+            <label for="user_name"></label><input type="text" name="user_name" id="user_name" value="james">
+        </p>
+        <p>
+            <label for="user_id"></label><input type="text" name="user_id" id="user_id" value="james123">
+        </p>
+    </form>
+</body>
+
+</html>
