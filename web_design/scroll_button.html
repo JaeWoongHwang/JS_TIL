@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 200) {
+                $('.top').fadeIn();
+            } else {
+                $('.top').fadeOut();
+            }
+        });
+
+
+        $('.top').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 400);
+            return false;
+        });
+    </script>
+    <style>
+        #wrapper {
+            width: 90%;
+            max-width: 1100px;
+            min-width: 760px;
+            margin: 50px auto;
+        }
+
+        #columns {
+            -webkit-column-count: 2;
+            -webkit-column-gap: 10px;
+            -moz-column-count: 2;
+            -moz-column-gap: 10px;
+            column-count: 2;
+            column-gap: 10px;
+        }
+
+        .card {
+            display: inline-block;
+            width: 200px;
+            background: #fff;
+            box-shadow: 0px 1px 1px #ccc;
+            padding: 15px;
+            padding-bottom: 15px;
+            margin: 10px;
+        }
+
+        .card img {
+            width: 200px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
+            margin-bottom: 5px;
+        }
+
+        .card p {
+            color: #333;
+            margin: 0;
+            padding: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        @media(min-width:960px) {
+            #columns {
+                -webkit-column-count: 3;
+                -moz-column-count: 3;
+                column-count: 3;
+            }
+        }
+
+        @media(min-width:1100px) {
+            #columns {
+                -webkit-column-count: 4;
+                -moz-column-count: 4;
+                column-count: 4;
+            }
+        }
+
+        .a.top {
+            position: fixed;
+            left: 50%;
+            bottom: 50px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="columns">
+            <div class="card">
+                <img src="images/pic1.jpg" alt="">
+                <p>Roasted chicken breast with sage and spinash</p>
+            </div>
+            <div class="card">
+                <img src="images/pic2.jpeg" alt="">
+                <p>Colorful Italian cuisnine ingredients</p>
+            </div>
+            <div class="card">
+                <img src="images/pic1.jpg" alt="">
+                <p>Roasted chicken breast with sage and spinash</p>
+            </div>
+            <div class="card">
+                <img src="images/pic2.jpeg" alt="">
+                <p>Colorful Italian cuisnine ingredients</p>
+            </div>
+            <div class="card">
+                <img src="images/pic1.jpg" alt="">
+                <p>Roasted chicken breast with sage and spinash</p>
+            </div>
+            <div class="card">
+                <img src="images/pic2.jpeg" alt="">
+                <p>Colorful Italian cuisnine ingredients</p>
+            </div>
+            <div class="card">
+                <img src="images/pic1.jpg" alt="">
+                <p>Roasted chicken breast with sage and spinash</p>
+            </div>
+            <div class="card">
+                <img src="images/pic2.jpeg" alt="">
+                <p>Colorful Italian cuisnine ingredients</p>
+            </div>
+            <div class="card">
+                <img src="images/pic1.jpg" alt="">
+                <p>Roasted chicken breast with sage and spinash</p>
+            </div>
+            <div class="card">
+                <img src="images/pic2.jpeg" alt="">
+                <p>Colorful Italian cuisnine ingredients</p>
+            </div>
+            <div class="card">
+                <img src="images/pic1.jpg" alt="">
+                <p>Roasted chicken breast with sage and spinash</p>
+            </div>
+            <div class="card">
+                <img src="images/pic2.jpeg" alt="">
+                <p>Colorful Italian cuisnine ingredients</p>
+            </div>
+        </div>
+        <hr>
+        <div id="columns">
+            <div class="card">
+                <img src="images/pic1.jpg" alt="">
+                <p>Roasted chicken breast with sage and spinash</p>
+            </div>
+            <div class="card">
+                <img src="images/pic2.jpeg" alt="">
+                <p>Colorful Italian cuisnine ingredients</p>
+            </div>
+            <div class="card">
+                <img src="images/pic1.jpg" alt="">
+                <p>Roasted chicken breast with sage and spinash</p>
+            </div>
+            <div class="card">
+                <img src="images/pic2.jpeg" alt="">
+                <p>Colorful Italian cuisnine ingredients</p>
+            </div>
+            <div class="card">
+                <img src="images/pic1.jpg" alt="">
+                <p>Roasted chicken breast with sage and spinash</p>
+            </div>
+            <div class="card">
+                <img src="images/pic2.jpeg" alt="">
+                <p>Colorful Italian cuisnine ingredients</p>
+            </div>
+            <div class="card">
+                <img src="images/pic1.jpg" alt="">
+                <p>Roasted chicken breast with sage and spinash</p>
+            </div>
+            <div class="card">
+                <img src="images/pic2.jpeg" alt="">
+                <p>Colorful Italian cuisnine ingredients</p>
+            </div>
+            <div class="card">
+                <img src="images/pic1.jpg" alt="">
+                <p>Roasted chicken breast with sage and spinash</p>
+            </div>
+            <div class="card">
+                <img src="images/pic2.jpeg" alt="">
+                <p>Colorful Italian cuisnine ingredients</p>
+            </div>
+            <div class="card">
+                <img src="images/pic1.jpg" alt="">
+                <p>Roasted chicken breast with sage and spinash</p>
+            </div>
+            <div class="card">
+                <img src="images/pic2.jpeg" alt="">
+                <p>Colorful Italian cuisnine ingredients</p>
+            </div>
+        </div>
+        <a href="#" class="top">Top</a>
+    </div>
+</body>
+
+</html>
