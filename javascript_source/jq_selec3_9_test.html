@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("#wrap p:eq(2)").after("<p>After</p>");
+            $("<p>insertAfter</p>").insertAfter("#wrap p:eq(1)");
+            $("#wrap p:eq(1)").before("<p>Before</p>");
+            $("<p>insertBefore</p>").insertBefore("#wrap p:eq(0)");
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <p>content1</p>
+        <p>content2</p>
+        <p>content3</p>
+    </div>
+</body>
+
+</html>
