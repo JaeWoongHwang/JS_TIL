@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("h2").replaceWith("<h3>Replace Method</h3>");
+            $("<p>Change</p>").replaceAll("div");
+        });
+    </script>
+</head>
+
+<body>
+    <section class="box1">
+        <h2>title1</h2>
+        <div>content1</div>
+        <div>content2</div>
+    </section>
+    <section class="box2">
+        <h2>title2</h2>
+        <div>content3</div>
+        <div>content4</div>
+    </section>
+</body>
+
+</html>
