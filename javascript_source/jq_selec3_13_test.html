@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("strong").unwrap(); // 요소를 감싸는 부모요소를 제거한다.
+            $(".ct1").wrap("<div/>"); //클래스의 값이 ct1인 요소를 div요소로 각각 감싼다.
+            $(".ct2").wrapAll("<div/>"); //클래스의 값이 ct2인 요소를 div요소로 한꺼번에 감싼다.
+            $("li").wrapInner("<h3/>"); // li요소의 모든 하위 요소를 h3 요소로 감싼다.
+        });
+    </script>
+    <style>
+        div{background-color: #ffcc00;}
+    </style>
+</head>
+
+<body>
+    <h1 id="tit_1">
+        <strong>객체 조작 및 생성</strong>
+    </h1>
+
+    <p class="ct1">content1</p>
+    <p class="ct1">content2</p>
+    <p class="ct2">content3</p>
+    <p class="ct2">content4</p>
+    <ul>
+        <li>content3</li>
+        <li>content4</li>
+    </ul>
+</body>
+
+</html>
