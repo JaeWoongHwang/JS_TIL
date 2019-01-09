@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".wrap_1 p:first").text("내용1");
+
+            $(".wrap_1 p.active").removeClass("active").addClass("on");
+
+            $(".wrap_1 p:eq(2) a").arrt("href", "http://www.naver.com");
+
+            $(".wrap_1 p:eq(3) input").val("Korea");
+
+            $(".wrap_2 p:first").after("<p>After(append1)</p>");
+
+            $(".wrap_2 p:first").before("<p>Before(append2)</p>");
+
+            $(".wrap_3 p").unwrap().wrapInner("<strong/>");
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="wrap_1">
+        <p>text1</p>
+        <p class="active">content2</p>
+        <p><a href="#">naver</a></p>
+        <p>
+            <input type="text" value="Hello">
+        </p>
+    </div>
+    <div class="wrap_2">
+        <div>
+            <p>content5</p>
+            <p>content6</p>
+        </div>
+    </div>
+    <div class="wrap_3">
+        <div>
+            <p>content7</p>
+            <p>content8 </p>
+        </div>
+    </div>
+</body>
+
+</html>
