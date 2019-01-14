@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        // jQuery not() 메서드를 이용하여 첫번째 li 요소만 제외시킨 li의 배경에 노란색을 적용
+        $(function () {
+            $("#myList li").not(":first").css({
+                "background-color": "#ffcc00"
+            });
+        });
+
+    </script>
+    <style>
+        #myList li {
+            font-size: 20px;
+            color: #808080;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="myList">
+        <li>Content1</li>
+        <li>Content2</li>
+        <li>Content3</li>
+        <li>Content4</li>
+    </ul>
+</body>
+
+</html>
