@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".btn1").click(function () {
+                $(".btn1").parent().next().css({
+                    "color": "f00"
+                });
+            });
+
+            $(".btn2").on({
+                "mouseover focus": function () {
+                    $(".btn2").parent().next().css({
+                        "color": "0f0"
+                    });
+                }
+            });
+
+            // 이벤트 제거 메서드
+            // $(".btn1").off("click");
+            // $("btn2").off("mouseover focus");
+        });
+
+    </script>
+</head>
+
+<body>
+    <p>
+        <button class="btn1">BUTTON1</button>
+    </p>
+    <p>Content1</p>
+    <p>
+        <button class="btn2">BUTTON2</button>
+    </p>
+    <p>Content2</p>
+</body>
+
+</html>
