@@ -38,6 +38,7 @@
     ~~~
 
 - 테이블 태그 : 테이블 태그는 과거에는 웹 문서의 전체적인 레이아웃을 만들 때 많이 사용되었으나, 웹 표준 시대에는 <u>회원가입, 게시판, 설문조사</u> 등에 사용된다.
+
 - 폼 태그
   - action: 데이터를 어디로 보낼 지 url 정보
   - method :  데이터 전송 방식을 구분
@@ -63,3 +64,27 @@
     - article : section과 유사하며, 글 또는 어떠한 내용 출력
     - aside : 부가적인 내용
 
+- embed 태그
+
+  - 멀티미디어 요소 삽입 태그, html5에선 많이 사용하지 않는 추세 => audio / video 태그 많이 사용
+  - 속성
+    - src
+    - width
+    - height
+    - autostart : 자동실행 여부(true/false)
+
+- audio 태그
+  - 오디오 태그를 사용하면 웹 문서에 음악을 삽입할 수 있다.
+  - 오디오 태그에는 다양한 속성이 있다.
+  - 속성
+    - scr
+    - controls: 컨트롤러 출력 controls="controls" (true/false가 아님 컨트롤러를 빼고 싶다면 속성값 자체를 제거)
+    - autoplay
+    - loop  : 반복 실행
+- video 태그
+  - 비디오 태그를 사용하면 웹 문서에 영상을 삽입할 수 있다.
+  - 속성
+    - type :  재생매체 타입 type="video/mp4"
+    - controls
+    - autoplay
+    - loop
