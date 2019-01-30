@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".btn1").on("click", function (e) {
+                // a 요소에 링크된 페이지로 이동하는 기본 이벤트를 차단
+                e.preventDefault();
+                $(".txt1").css({ "background-color": "#ff0" });
+            });
+
+            $(".btn2").on("click", function (e) {
+                $(".txt2").css({ "background-color": "#e5e5e5" });
+            });
+
+            $(".btn3").on("dblclick", function (e) {
+                $(".txt3").css({ "background-color": "#0f0" });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p><a href="http://easyspub.co.kr" class="btn1">Button1</a></p>
+    <p class="txt1">Content1</p>
+    <p><a href="http://easyspub.co.kr" class="btn2">Button2</a></p>
+    <p class="txt2">Content2</p>
+    <p><button class="btn3">Button3</button></p>
+    <p class="txt3">Content3</p>
+</body>
+
+</html>

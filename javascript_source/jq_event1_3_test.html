@@ -11,23 +11,22 @@
         $(function () {
             $(".btn1").click(function () {
                 $(".btn1").parent().next().css({
-                    "color": "f00"
+                    "color": "#f00"
                 });
             });
 
             $(".btn2").on({
                 "mouseover focus": function () {
                     $(".btn2").parent().next().css({
-                        "color": "0f0"
+                        "color": "#0f0"
                     });
                 }
             });
 
             // 이벤트 제거 메서드
-            // $(".btn1").off("click");
-            // $("btn2").off("mouseover focus");
+            $(".btn1").off("click");
+            $("btn2").off("mouseover focus");
         });
-
     </script>
 </head>
 

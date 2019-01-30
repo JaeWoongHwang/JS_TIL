@@ -88,3 +88,18 @@
     - controls
     - autoplay
     - loop
+
+- 두 줄 이상일 경우 말줄임 CSS
+
+~~~
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2; /* 텍스트 라인 수 */
+-webkit-box-orient: vertical;
+word-wrap: break-word; /* 강제로 끊어서 줄바꿈 */
+line-height: 1.2em;
+height: 2.4em /* line-height가 1.2em이고 2라인을 자르기 때문에 height는 line-height * 라인의 수 1.2em * 2 = 2.4em
+
+~~~
+
