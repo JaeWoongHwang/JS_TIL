@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("#rel_site").on("change", function () {
+                $(".txt").text($(this).val());
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <select id="rel_site">
+        <option value="">Choose a Site</option>
+        <option value="www.google.com">Google</option>
+        <option value="www.naver.com">Naver</option>
+        <option value="www.daum.net">Daum</option>
+    </select>
+    <p class="txt"></p>
+</body>
+
+</html>

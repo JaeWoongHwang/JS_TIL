@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("#btn1").data({ "text": "javascript" }).on({
+                "mouseover": overFnc,
+                "mouseout": outFnc
+            });
+
+            $("#btn2").data({ "text": "welcome!" }).on({
+                "mouseover": overFnc,
+                "mouseout": outFnc
+            });
+
+            function overFnc() {
+                $(".txt").text($(this).data("text"));
+            }
+
+            function outFnc() {
+                $(".txt").text("");
+            }
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <p><button id="btn1">Button1</button></p>
+    <p><button id="btn2">Button2</button></p>
+    <p class="txt"></p>
+</body>
+
+</html>
