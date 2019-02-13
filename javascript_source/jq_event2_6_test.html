@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".btn_1.on").one("mouseover focus", function () {
+                alert("Hello!");
+            });
+
+            $(".btn_1").addClass("on");
+
+            $(document).on("mouseover focus", ".btn_2.on", function () {
+                alert("Welcome!");
+            });
+
+            $(".btn_2").addClass("on");
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <p><button class="btn_1">button1</button></p>
+        <p><button class="btn_2">button2</button></p>
+    </div>
+</body>
+
+</html>

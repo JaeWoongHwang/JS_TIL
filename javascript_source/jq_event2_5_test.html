@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".menu_wrap_1 a").on("click", function (e) {
+                e.preventDefault();
+
+                $(".menu_wrap_1 a").css({
+                    "background-color": "#f90"
+                });
+
+                $(this).css({
+                    "background-color": "#fff0"
+                });
+            });
+            $(".menu_wrap_2 a").on("click", function (e) {
+                e.preventDefault();
+
+                $(".menu_wrap_2 a").css({
+                    "background-color": "#fff"
+                });
+
+                var idx = $(".menu_wrap_2 a").index(this);
+
+                console.log(idx);
+
+                $(".menu_wrap_2 a").eq(idx).css({
+                    "background-color": "#0ff"
+                });
+
+                $(".indexNum").text(idx);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h2>$(this)</h2>
+    <ul class="menu_wrap_1">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+    </ul>
+    <h2>index()</h2>
+    <ul class="menu_wrap_2">
+        <li><a href="#">menu4</a></li>
+        <li><a href="#">menu5</a></li>
+        <li><a href="#">menu6</a></li>
+    </ul>
+    <p class="indexNum"></p>
+</body>
+
+</html>
