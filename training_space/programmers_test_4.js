@@ -1,13 +1,11 @@
 var n = 6;
-var cores = ["1", "2", "3"];
+var cores = [1, 2, 3];
 var answer = 0;
 
-function solution() {
-
-    for (var i = 0; i < cores.length; i++) {
-
+function solution(n, cores) {
+    for (var i = 1; i < cores.length; i++) {
         var temp = n - cores[i];
-
+       
         if (temp <= 0) {
             answer = i;
             break;
@@ -17,9 +15,8 @@ function solution() {
         }
     }
     return answer;
-
 }
 
 solution();
 
-console.log("answer" + answer);
+console.log("answer   " + answer);
