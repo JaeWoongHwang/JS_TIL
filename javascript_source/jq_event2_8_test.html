@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".btn1").on("mouseover", function () {
+                alert("Hello!");
+            });
+
+            $(document).on("mouseover", ".btn2", function () {
+                alert("Welcome!");
+            });
+
+            var btn2 = $("<p><button class=\"btn2\">Button2</button></p>");
+            $("#wrap").append(btn2);
+
+            $(".del1").on("click", function () {
+                console.log("Function was occured");
+                $(".btn1").off("mouseover");
+            });
+
+            $(".del2").on("click", function () {
+                console.log("Function was occured");
+                $(document).off("mouseover", ".btn2");
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <p><button class="btn1">Button1</button></p>
+    </div>
+    <p>
+        <button class="del1">button1 event off</button>
+        <button class="del2">button2 event off</button>
+    </p>
+</body>
+
+</html>

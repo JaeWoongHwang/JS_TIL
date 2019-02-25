@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            var baseFontSize = 14;
+            $(".zoomBtnZone button").on("click", zoomInOut);
+
+            function zoomInOut() {
+                if ($(this).hasClass("zoomOut")) {
+                    if (baseFontSize <= 8) return false;
+                    baseFontSize--;
+
+                } else if ($(this).hasClass("zoomIn")) {
+                    if (baseFontSize >= 20) return false;
+                    baseFontSize++;
+                } else {
+                    baseFontSize = 14;
+                }
+
+                $(".fontSize").text(baseFontSize + "px");
+                $("body").css({
+                    fontSize: baseFontSize + "px"
+                });
+            };
+        });
+
+    </script>
+</head>
+
+<body>
+    <p class="zoomBtnZone">
+        <button class="zoomOut">-</button>
+        <button class="originBin">100%</button>
+        <button class="zoomIn">+</button>
+    </p>
+    <p class="fontSize">14px</p>
+    <div id="wrap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, inventore vel. Nulla optio alias
+        quis vitae unde qui quos, corrupti totam non quo ex reprehenderit deserunt temporibus praesentium iste aliquid!
+    </div>
+</body>
+
+</html>
