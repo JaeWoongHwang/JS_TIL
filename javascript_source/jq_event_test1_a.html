@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            var beforeMenu = null;
+
+            $(".gnb > button").on("focusin", function () {
+                if (beforeMenu) beforeMenu.css({ background: "none" });
+                $(this).css({ "background-color": "#0ff" });
+                beforeMenu = $(this);
+            });
+
+            $(".gnb > button").on("focusout", function () {
+                if (beforeMenu) beforeMenu.css({ background: "none" });
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <ul class="gnb">
+        <button><a href="#">menu1</a></button>
+        <button><a href="#">menu2</a></button>
+        <button><a href="#">menu3</a></button>
+        <button><a href="#">menu4</a></button>
+    </ul>
+</body>
+
+</html>
