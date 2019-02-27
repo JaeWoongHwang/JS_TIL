@@ -11,13 +11,13 @@
         $(function () {
             var beforeMenu = null;
 
-            $(".gnb > button").on("focusin", function () {
+            $(".gnb > button > a").on("mouseover focus", function () {
                 if (beforeMenu) beforeMenu.css({ background: "none" });
                 $(this).css({ "background-color": "#0ff" });
                 beforeMenu = $(this);
             });
 
-            $(".gnb > button").on("focusout", function () {
+            $(".gnb").on("mouseleave", function () {
                 if (beforeMenu) beforeMenu.css({ background: "none" });
             });
         });
