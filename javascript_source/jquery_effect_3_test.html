@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Animation Stop, Delay Method</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".txt1").animate({ marginLeft: "300px" }, 1000);
+
+            $(".txt2").delay(3000).animate({ marginLeft: "300px" }, 1000);
+
+            $(".btn1").on("click", moveElement);
+
+            function moveElement() {
+                $(".txt3").animate({ marginLeft: "+=50px" }, 800);
+
+                $(".txt4").animate({ marginLeft: "+=50px" }, 800);
+                $(".txt4").stop();
+
+                $(".txt5").animate({ marginLeft: "+=50px" }, 800);
+                $(".txt5").stop(true, true);
+            }
+        });
+    </script>
+    <style>
+        p {
+            width: 11px;
+            text-align: center;
+        }
+
+        .txt1 {
+            background-color: aqua
+        }
+
+        ;
+
+        .txt2 {
+            background-color: pink
+        }
+
+        ;
+
+        .txt3 {
+            background-color: orange
+        }
+
+        ;
+
+        .txt4 {
+            background-color: green
+        }
+
+        ;
+
+        .txt5 {
+            background-color: gold
+        }
+
+        ;
+    </style>
+</head>
+
+<body>
+    <p class="txt1">Effect1</p>
+    <p class="txt2">Effect2<br /> delay(3000)</p>
+    <p><button class="btn1">Forward 50px</button></p>
+    <p class="txt3">Effect3</p>
+    <p class="txt4">Effect4<br />stop()</p>
+    <p class="txt5">Effect5<br />stop(true, true)</p>
+</body>
+
+</html>
