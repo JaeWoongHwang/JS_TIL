@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vegas Video</title>
+    <link rel="stylesheet" href="css/vegas.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/vegas.js"></script>
+</head>
+
+<body>
+    <script>
+        $(function () {
+            $('body').vegas({
+                slides: [
+                    // 동영상 재생 실패 시 대체 이미지
+                    {
+                        src: 'images/bg1.jpg',
+                        video: {
+                            src: ['video/video1.mp4'],
+                            loop: true,
+                            mute: true
+                        }
+                    }
+                ]
+            });
+        });
+
+    </script>
+</body>
+
+</html>
