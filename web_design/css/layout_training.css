@@ -78,6 +78,39 @@
     nav a#trigger {
       display: none;
     }          
+    .intro{
+      padding: 20px 50px;
+      display: flex;
+      align-items: center;
+    }
+    .text{
+      flex: 2;
+    }
+    .img{
+      display: block;
+      flex: 1;
+    }
+    .img>img{
+      max-width: 250px;
+    }
+    .footer-info{
+      max-width: 1300px;
+      display: flex;
+      align-items: center;
+    }
+    .contact{
+      flex:2;
+    }
+    .sns{
+      flex: 1;
+    }
+    .program-list{
+      display: flex;
+      justify-content: space-between;
+    }
+    .program{
+      flex-basis: 22%;
+    }
   }
   
   /* 섹션 */
