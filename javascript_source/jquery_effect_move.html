@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <p class="btnWrap">
+        <button class="backBnt">Back</button>
+        <button class="goBtn">Go</button>
+    </p>
+    <div class="wrap">
+        <p class="txt1">Content1</p>
+    </div>
+
+    <script>
+        $(function () {
+            var txt1 = $(".txt1");
+            var count = 1;
+            $(".btnWrap button").on("click", function () {
+                if (!txt1.is(":animated")) {
+                    if ($(this).hasClass("backBtn")) {
+                        count--;
+                        if (count < 1) {
+                            count = 1;
+                            return false;
+                        }
+                        txt1.animate({ marginLeft: "-=10%" }, 300);
+                    } else {
+                        count++;
+                        if (count > 10) {
+                            count = 10;
+                            return false;
+                        }
+                        txt1.animate({ marginLeft: "+=10%" }, 300);
+                    }
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

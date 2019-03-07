@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>queue method</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".txt1")
+                .animate({ marginLeft: "200px" }, 1000)
+                .animate({ marginTop: "200px" }, 1000)
+                .queue(function () {
+                    $(this).css({ background: "red" });
+                    $(this).dequeue();
+                })
+                .animate({ marginLeft: 0 }, 1000)
+                .animate({ marginTop: 0 }, 1000);
+        });
+    </script>
+    <style>
+        * {
+            margin: 0
+        }
+
+        ;
+
+        .txt1 {
+            width: 50px;
+            text-align: center;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="txt1">Content</p>
+</body>
+
+</html>
