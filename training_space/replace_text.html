@@ -8,26 +8,23 @@
     <title>Replace text to star</title>
     <script src="js/jquery.js"></script>
     <script>
-        $(function(){
-            var s = $(".txt").text();
-
-            function hide_numbers(s) {
-            var result = "";
-            var sLength = s.length;
-            for (var i = 0; i < sLength; i++) {
-                result += i > sLength - 4 ? "*" : s.charAt(i);
+        $(document).ready(function () {
+            function convert() {
+                var text = $(this).replace(/./g, '*');
+                return text;
             }
-            return result;
-        }
-            console.log("결과 : " + hide_numbers(s));
         });
-        
-
     </script>
 </head>
 
 <body>
-    <h1 class="txt">Testcode</h1>
+    <h1 class="txt">Text to Asterisk</h1>
+    <div class="text_wrapper">
+        <p onload="convert()">userid1211113</p>
+        <p>usertex456</p>
+        <p>usertex789</p>
+        <p>usertex000</p>
+    </div>
 </body>
 
 </html>
