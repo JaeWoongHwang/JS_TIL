@@ -8,15 +8,20 @@
     <title>Replace text to star</title>
     <script src="js/jquery.js"></script>
     <script>
-        function hide_numbers(s) {
+        $(function(){
+            var s = $(".txt").text();
+
+            function hide_numbers(s) {
             var result = "";
             var sLength = s.length;
             for (var i = 0; i < sLength; i++) {
-                result += i < sLength - 4 ? "*" : s.charAt(i);
+                result += i > sLength - 4 ? "*" : s.charAt(i);
             }
             return result;
         }
-        console.log("결과 : " + hide_numbers('value'));
+            console.log("결과 : " + hide_numbers(s));
+        });
+        
 
     </script>
 </head>
