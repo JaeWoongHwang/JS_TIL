@@ -8,23 +8,36 @@
     <title>Replace text to star</title>
     <script src="js/jquery.js"></script>
     <script>
-        $(document).ready(function () {
-            function convert() {
-                var text = $(this).replace(/./g, '*');
-                return text;
+        var phone_number = "01033334444";
+        function solution(phone_number) {
+            var array = phone_number.split("");
+            for (var i = 0; i < phone_number.length; i++) {
+                if (i < phone_number.length - 4) {
+                    var answer = array[i];
+                    continue;
+                } else {
+                    answer = array[i].replace(array[i], "*");
+                    continue;
+                }
             }
-        });
+            console.log(answer);
+
+            return answer;
+        }
+        solution(phone_number);
     </script>
 </head>
 
 <body>
     <h1 class="txt">Text to Asterisk</h1>
     <div class="text_wrapper">
-        <p onload="convert()">userid1211113</p>
+        <p>userid1211113</p>
         <p>usertex456</p>
         <p>usertex789</p>
         <p>usertex000</p>
     </div>
+
+
 </body>
 
 </html>
