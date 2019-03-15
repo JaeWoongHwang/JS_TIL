@@ -10,6 +10,14 @@
     <script>
         $(document).ready(function () {
             $(function () {
+                // 이미지 감싸는 div의 width와 height를 같게 만듦
+                var getWidth = $('.wrapper').width();
+                console.log("Width:" + getWidth);
+                $('.wrapper').css({
+                    'height': getWidth + 'px'
+                });
+                console.log("Height" + $('.wrapper').height());
+
                 // 이미지 감싸는 div 변수에 저장
                 var div = document.querySelector('.wrapper');
                 // 이미지 변수에 저장
@@ -19,7 +27,6 @@
                 var divAspect = div.offsetHeight / div.offsetWidth;
                 // 이미지의 가로세로 비율
                 var imgAspect = img.height / img.width;
-                console.log(divAspect);
 
                 if (imgAspect < divAspect) {
                     // 이미지 세로 길이 < div 세로 길이  => 세로를 div에 맞추고 가로는 잘라낸다
@@ -36,11 +43,19 @@
 
     </script>
     <style>
+        body,
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
         .wrapper {
-            width: 120px;
-            height: 90px;
+            width: 50%;
+            border-radius: 50%;
             overflow: hidden;
             border: 2px solid orange;
+            padding: 0;
+            margin: 0;
         }
 
         img {
@@ -51,8 +66,10 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <img src="images/santorini.jpeg" alt="">
+    <div class="container">
+        <div class="wrapper">
+            <img src="images/santorini.jpeg" alt="">
+        </div>
     </div>
 </body>
 

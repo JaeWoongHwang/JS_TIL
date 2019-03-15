@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tiny</title>
+    <script
+        src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=dkujyz4ql4ic6nafji2i9zmet94pwzold893wpkuz6peg6k3"></script>
+    <script>
+        TinyMCERails.configuration.default = {
+            selector: "textarea",
+            menubar: false,
+            statusbar: false,
+            toolbar: ["undo redo | styleselect | fontselect | fontsizeselect  | bold italic hr underline emoticons | alignleft aligncenter alignright alignjustify  | forecolor backcolor | link image uploadimage | table | code | preview"],
+            plugins: "image,link,uploadimage,code,textcolor,colorpicker,hr,emoticons,preview,contextmenu,table,textpattern,directionality",
+            fontsize_formats: "8pt 10pt 12pt 14pt 18pt 24pt 36pt",
+            contextmenu: "link image uploadimage",
+            textpattern_patterns: [{ "start": "*", "end": "*", "format": "italic" }, { "start": "**", "end": "**", "format": "bold" }, { "start": "#", "format": "h1" }, { "start": "##", "format": "h2" }, { "start": "###", "format": "h3" }, { "start": "####", "format": "h4" }, { "start": "#####", "format": "h5" }, { "start": "######", "format": "h6" }, { "start": "1. ", "cmd": "InsertOrderedList" }, { "start": "* ", "cmd": "InsertUnorderedList" }, { "start": "- ", "cmd": "InsertUnorderedList" }],
+            relative_urls: false,
+            remove_script_host: false
+        };
+        TinyMCERails.configuration.alternate = {
+            selector: "#comment-editor",
+            menubar: false,
+            statusbar: false,
+            plugins: "image",
+            relative_urls: false,
+            remove_script_host: false
+        };
+        TinyMCERails.initialize('default', {
+            language: "ko"
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <h1>TinyMCE Quick Start Guide</h1>
+    <form method="post">
+        <textarea id="mytextarea">Hello, World!</textarea>
+    </form>
+</body>
+
+</html>
