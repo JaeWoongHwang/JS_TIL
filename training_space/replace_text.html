@@ -7,10 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Replace text to star</title>
     <script src="js/jquery.js"></script>
-    <script>
+    <!-- <script>
         var phone_number = "01033334444";
         function solution(phone_number) {
             var numArray = phone_number.split("");
+            console.log(numArray);
             console.log("Array Length : " + (numArray.length - 4));
             var answer = "";
 
@@ -28,16 +29,35 @@
             return answer;
         }
         solution(phone_number);
+    </script> -->
+    <script>
+        $(document).ready(function () {
+            $('.user_nickname').text(function() {
+                var replacement = "";
+                var getTxt = $(this).text();
+                var txtArray = getTxt.split("");
+                for (var i = 0; i < txtArray.length; i++) {
+                    if (i < (txtArray.length - 3)) {
+                        replacement += txtArray[i];
+                        continue;
+                    } else {
+                        replacement += txtArray[i].replace(txtArray[i], "*");
+                        continue;
+                    }
+                }
+                $(this).text(replacement);
+            });
+        });
     </script>
 </head>
 
 <body>
     <h1 class="txt">Text to Asterisk</h1>
     <div class="text_wrapper">
-        <p class="n">userid1211113</p>
-        <p>usertex456</p>
-        <p>usertex789</p>
-        <p>usertex000</p>
+        <p class="user_nickname">userid1211113</p>
+        <p class="user_nickname">usertex456</p>
+        <p class="user_nickname">usertex789</p>
+        <p class="user_nickname">usertex000</p>
     </div>
 
 
