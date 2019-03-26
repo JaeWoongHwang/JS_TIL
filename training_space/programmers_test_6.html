@@ -9,28 +9,28 @@
 </head>
 
 <body>
+    <div>
+        <p>Programmers Test</p>
+    </div>
     <script>
         var arr = [4, 3, 2, 1];
-
-        function solution(arr) {
-            var answer = [];
+        var answer = [];
+        function solution() {
             // Sort Array
-            arr.sort(function (a, b) {
-                return a[sortingField] - b[sortingField];
-            });
-            console.log(arr);
+            arr.sort();
+            console.log("arr value : " + arr);
             // Compare with Another Number
-            for (var i = 1; i < sort.length(); i++) {
-                if (sort.length() == 1) {
-                    answer = -1;
+            for (var i = 1; i < arr.length; i++) {
+                if (arr.length == 1) {
+                    answer[i] = -1;
                     break;
                 } else {
-                    answer = sort[i];
+                    answer[i] = arr[i];
                     continue;
                 }
             }
             return answer;
-            console.log(answer);
+            console.log("answer value : " + answer);
 
         }
         solution();
