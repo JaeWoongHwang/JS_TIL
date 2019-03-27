@@ -13,7 +13,7 @@
         <p>Programmers Test</p>
     </div>
     <script>
-        var arr = [4, 3, 2, 1];
+        var arr = [4,3,2,1];
         var answer = [];
         function solution() {
             // Sort Array
@@ -25,13 +25,13 @@
                     answer[i] = -1;
                     break;
                 } else {
-                    answer[i] = arr[i];
+                    answer[i-1] = arr[i];
                     continue;
                 }
             }
-            return answer;
+            
             console.log("answer value : " + answer);
-
+            return answer;
         }
         solution();
 
