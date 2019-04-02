@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Timer</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        #app {
+            width: 100px;
+            height: 100px;
+            font-size: 20px;
+            color: #000000;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <!-- First Case -->
+    <!-- <script> 
+        function realTime() {
+            var today = new Date();
+            var hours = today.getHours();
+            var minutes = today.getMinutes();
+            var seconds = today.getSeconds();
+
+            minutes = checkTime(minutes);
+            seconds = checkTime(seconds);
+
+            document.getElementById("app").innerHTML = hours + ":" + minutes + ":" + seconds;
+
+            var t = setTimeout(startTime, 500);
+
+        }
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };
+            return i;
+        }
+
+    </script> -->
+    <!-- Second Case -->
+    <script>
+        $(document).ready(function () {
+            function realTime() {
+                var printArea = document.getElementById("app");
+                // Get Values
+                var today = new Date();
+                var amPm = "AM"; //Initial Value;
+                var currentHours = setZero(today.getHours(), 2);
+                var currentMinutes = setZero(today.getMinutes(), 2);
+                var currentSeconds = setZero(today.getSeconds(), 2);
+
+                // Set AM & PM
+                if (currentHours >= 12) {
+                    amPm = "PM";
+                    currentHours = setZero(currentHours - 12, 2);
+                }
+
+                // Print Values
+                printArea.innerHTML = currentHours + ":" + currentMinutes + ":" + currentSeconds + ":" + amPm;
+
+                // Call Function
+                setTimeout(realTime, 1000);
+            }
+
+            // Set Number Layout
+            function setZero(num, digit) {
+                var zero = "";
+                num = num.toString();
+                if (num.length < digit) {
+                    for (var i = 0; i < digit - num.length; i++) {
+                        zero += "0";
+                    }
+                }
+
+                return zero + num;
+            }
+
+            realTime();
+        });
+
+    </script>
+</body>
+
+</html>
