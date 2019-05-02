@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Extension </title>
+    <script src="js/jquery.js"></script>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #image_wrapper {
+            width: 100%;
+            height: 800px;
+            text-align: center;
+        }
+
+        #image_wrapper img {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="image_wrapper">
+        <img src="img/bottle.jpeg" alt="">
+    </div>
+    <script>
+        function simpleLightbox(imageUrl, bgColor, maxWidth) {
+            if (typeof maxWidth === 'undefined') {
+                maxWidth = '1100px';
+            }
+            console.log(imageUrl);
+            window.open('', 'simpleLightbox').document.write(
+                '<html><head><meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, width=device-width" /></head><body style="margin:0; background-color: #000000; height:100%;" onclick="javascript:window.close(\'simpleLightbox\');"><table border="0" width="100%" height="100%"><tr><td align="center" style="font-size:14px; color:#f7f7f7; font-weight: 600px !important;">[이미지를 누르면 확대 화면이 닫힙니다.]</td></tr><tr><td valign="middle" align="center"><img style="position:relative;z-index:2;width:100%;max-width:' +
+                maxWidth + ';" src="' + imageUrl + '"/></td></tr></table></body></html>');
+        }
+
+        $('#image_wrapper > img').on('click', function () {
+            simpleLightbox($(this).attr('src'));
+        });
+    </script>
+
+    <script>
+        - (BOOL)webView: (UIWebView *)webView shouldStartLoadWithRequest: (NSURLRequest *)request navigationType: (UIWebViewNavigationType)navigationType
+                {
+                    // Popup Window
+                    range = [absoluteURL rangeOfString:@"/popup.asp"];
+                    if (range.location != NSNotFound) {
+                        if ([absoluteURL rangeOfString:@"back"].location == 0)
+                        {
+                            [self.popupView removeFromSuperview];
+                            self.popupView = nil;
+                            return NO;
+                        }
+
+                        if (self.popupView)
+                            return YES;
+
+                        dispatch_async(dispatch_get_main_queue(), ^ {
+                            CGRect bounds =[[UIScreen mainScreen] bounds];
+                            UIWebView *webView =[[UIWebView alloc] initWithFrame: bounds];
+                        webView.delegate = self;
+                        [webView loadRequest: request];
+                        [self.view addSubview: webView];
+                        self.popupView = webView;
+                    });
+                    return NO;
+                }
+
+                return YES;
+        };
+    </script>
+</body>
+
+</html>
