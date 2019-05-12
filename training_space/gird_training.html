@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Plugin Training</title>
+    <!--Grid JS-->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.grid-a-licious.min.js"></script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            padding: 50px 10px;
+        }
+
+        .container .grid-item {
+            width: 400px;
+            height: auto;
+            padding: 20px;
+
+        }
+
+        .grid-item .img-box {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            border: 1px solid #e5e5e5;
+        }
+
+        .grid-item .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .grid-item .text-box {
+            width: 100%;
+            height: auto;
+            font-size: 14px;
+            letter-spacing: -0.4px;
+            border: 1px solid #e5e5e5;
+            margin-top: -1px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="grid">
+            <div class="grid-item" id="grid-content"> 
+                <div class="img-box"><img src="img/tumblr_mliicqSYbG1r5nwzoo1_500.jpg" alt=""></div>
+                <div class="text-box">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatem autem ipsum quos
+                        consequuntur tenetur similique culpa placeat</p>
+                </div>
+            </div>
+            <div class="grid-item" id="grid-content">
+                <div class="img-box"><img src="img/pic2.jpeg" alt=""></div>
+                <div class="text-box">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatem autem ipsum quos
+                        consequuntur tenetur similique culpa placeat</p>
+                </div>
+            </div>
+            <div class="grid-item" id="grid-content">
+                <div class="img-box"><img src="img/yosemite.jpg" alt=""></div>
+                <div class="text-box">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatem autem ipsum quos
+                        consequuntur tenetur similique culpa placeat</p>
+                </div>
+            </div>
+            <div class="grid-item" id="grid-content">
+                <div class="img-box"><img src="img/pic1.jpg" alt=""></div>
+                <div class="text-box">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatem autem ipsum quos
+                        consequuntur tenetur similique culpa placeat</p>
+                </div>
+            </div>
+            <div class="grid-item" id="grid-content">
+                <div class="img-box"><img src="img/bottle.jpeg" alt=""></div>
+                <div class="text-box">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatem autem ipsum quos
+                        consequuntur tenetur similique culpa placeat</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#grid-content").gridalicious({
+            animate: true,
+            width: 225,
+            animationOptions: {
+                queue: true,
+                speed: 200,
+                duration: 300,
+                effect: 'fadeInOnAppear'
+             
+            }
+        });
+    </script>
+
+</body>
+
+</html>
