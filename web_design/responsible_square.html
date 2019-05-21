@@ -1,35 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Respnsible Square</title>
-    <style>
-        html,body{
-          margin: 0;
-          padding: 0;
-          height: 100%;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Respnsible Square</title>
+  <script src="js/owl.carousel.min.js"></script>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
 
-        .container{
-          width: 100%;
-          height: 50vh;
-        }
+    .container {
+      width: 100%;
+      height: 50vh;
+    }
 
-        .container .square{
-          border: 10px solid #f7f7f7;
-          width: 20%;
-          padding-bottom: 20%;                          
-        }
-    
-    </style>
+    .container .square {
+      border: 10px solid #ff9000;
+      position: relative;
+      width: 25%;
+      padding-bottom: 25%;
+    }
+
+    .container .square .image_box {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .container .square img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <div class="square">
 
-        </div>
+<body>
+  <div class="container">
+    <div class="square">
+      <div class="imgage_box">
+        <img src="images/top-2.jpg" alt="">
+      </div>
     </div>
+  </div>
+
+  <!-- Oul Carousel -->
+  <div class="owl-carousel owl-theme">
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+  </div>
+
+  <!-- Oul Carousel JS -->
+  <script>
+    $(document).ready(function () {
+      $('.owl-carousel').owlCarousel();
+    });
+  </script>
 </body>
+
 </html>
