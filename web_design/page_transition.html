@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page Transition Test</title>
+    <script src="js/swup.min.js"></script>
+    <style>
+        .transition-fade {
+            transition: 0.4s;
+            opacity: 1;
+        }
+
+        html.is-animating .transition-fade {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="swup" class="transition-fade">
+        <h1>This is homepage</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua.
+        </p>
+        <a href="pinterest_layout.html">Go to other page</a>
+    </main>
+    <script>
+        const swup = new Swup(); // only this line when included with script tag
+        const options = {
+            animateHistoryBrowsing: false,
+            animationSelector: '[class*="transition-"]',
+            containers: ['#swup'],
+            cache: true,
+            linkSelector: 'a[href^="' + window.location.origin + '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup])',
+            skipPopStateHandling: function (event) {
+                if (event.state && event.state.source == 'swup') {
+                    return false;
+                }
+                return true;
+            },
+        };
+    </script>
+</body>
+
+</html>
