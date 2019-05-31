@@ -1,0 +1,33 @@
+html,
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.one_page{
+    width: 100%;
+    height: 100%;
+}
+
+.one_page div{
+    display: inline-block;
+}
+
+.non_list{
+    width: 40%;
+    height: 100%;
+    background-color: #232323;
+}
+
+.list{
+    width: 60%;
+    height: 100%;
+}
+
+.list .list_box{
+    width: 100%;
+    height: 50%;
+    background-color: #f7f7f7;
+}
