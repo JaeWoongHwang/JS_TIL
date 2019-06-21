@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Find Square Root</title>
+  <script src="js/jquery.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <div id="value_section">
+    <button onclick="find();">Click</button>
+  </div>
+
+
+  <script>
+    function find() {
+      var n = 3;
+      var result = -1;
+      var value = Math.sqrt(n);
+
+      parseInt(value) - value === 0 ?
+        return reuslt = Math.pow((value + 1), 2)): return result;
+
+    // Test Case 1
+    // parseInt(value) - value === 0 ? $("#value_section").text(Math.pow((value + 1), 2)) : $("#value_section").text(result);
+
+    // Test Case 2
+    // if (parseInt(value) - value === 0) {
+    //   result = value + 1;
+    //   console.log(result);
+    //   $("#value_section").text(Math.pow(result, 2));
+    // } else {
+    //   $("#value_section").text(result);
+    // }
+
+    // Passed code
+    // if (parseInt(value) - value === 0) {
+    //   answer = Math.pow((value + 1), 2);
+    //   return answer;
+    // } else {
+    //   return answer;
+    // }
+    }
+  </script>
+
+
+</body>
+
+</html>
