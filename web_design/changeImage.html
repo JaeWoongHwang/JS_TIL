@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Change Image Source</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="test">
+        <div class="trigger">
+            <img src="images/bg3.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".trigger").click(function () {
+                $("#test img").attr("src", "images/bg2.jpg");
+            });
+        });
+    </script>
+</body>
+
+</html>
