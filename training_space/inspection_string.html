@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inspection String</title>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button onclick="solution();">click</button>
+    </div>
+
+    <script>
+        function solution() {
+            var s = "11111234"
+            var answer = true;
+            if (s.length == 4 || s.length == 6) {
+                if (isNaN(s) == true) answer = false;
+            } else {
+                answer = false;
+            }
+            console.log(answer);
+        }
+    </script>
+
+</body>
+
+</html>
